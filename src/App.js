@@ -1,10 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './App.css'
+import Login from "./components/Login";
+import Form from "./components/Form";
+
+
+var userIsRegistered = false;
+
+// {isLoggedIn ? <h1>Hello</h1> : <Login />}
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
+    <div className="container">
+      {userIsRegistered ? <Login /> : <Form />}
     </div>
   );
 }
